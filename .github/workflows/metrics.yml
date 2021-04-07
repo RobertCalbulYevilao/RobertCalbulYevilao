@@ -2,9 +2,9 @@
 name: Metrics
 on:
   # Schedule updates (each hour)
-  schedule: [{cron: "0 * * * *"}]
+  schedule: [{ cron: '0 * * * *' }]
   # Lines below let you run workflow manually and on each commit
-  push: {branches: ["master", "main"]}
+  push: { branches: ['master', 'main'] }
   workflow_dispatch:
 jobs:
   github-metrics:
@@ -18,7 +18,7 @@ jobs:
           committer_token: ${{ secrets.GITHUB_TOKEN }}
 
           # Options
-          user: Coordinate-Cat
+          user: RobertCalbulYevilao
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Tokyo
